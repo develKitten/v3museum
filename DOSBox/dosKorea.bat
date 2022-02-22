@@ -43,6 +43,9 @@ if not exist %DosBoxSetPath%\HBIOS.COM (
     Powershell.exe Invoke-WebRequest -uri "https://github.com/develKitten/v3museum/blob/main/DOSBox/HBIOS.COM" ^
                                      -OutFile %DosBoxSetPath%\HBIOS.COM
 
+    Powershell.exe Invoke-WebRequest -uri "https://raw.githubusercontent.com/develKitten/v3museum/main/DOSBox/HBIOS.SYS" ^
+                                     -OutFile %DosBoxSetPath%\HBIOS.SYS
+
     SET fileName=""
 
     for %%a in (%DosBoxSetPath%\*) do (
