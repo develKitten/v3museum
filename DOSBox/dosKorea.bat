@@ -56,7 +56,7 @@ if not exist %DosBoxSetPath%\HBIOS.COM (
                                      -OutFile !filename!
 
     ECHO .>> !filename!
-    ECHO mount h %DosBoxSetPath% >> !filename!
+    ECHO mount h %DosBoxSetPath%\ >> !filename!
     ECHO h: >> !filename!
     ECHO HBIOS.COM >> !filename!
     ECHO z: >> !filename!
