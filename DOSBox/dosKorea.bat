@@ -40,11 +40,11 @@ if not exist %DosBoxSetPath%\korean.lang (
 
 :: 2. download "HBIOS.COM"
 if not exist %DosBoxSetPath%\HBIOS.COM (
-    Powershell.exe Invoke-WebRequest -uri "https://github.com/develKitten/v3museum/blob/main/DOSBox/HBIOS.COM" ^
-                                     -OutFile %DosBoxSetPath%\HBIOS.COM
-
-    Powershell.exe Invoke-WebRequest -uri "https://raw.githubusercontent.com/develKitten/v3museum/main/DOSBox/HBIOS.SYS" ^
-                                     -OutFile %DosBoxSetPath%\HBIOS.SYS
+    Powershell.exe Invoke-WebRequest -uri "https://github.com/develKitten/v3museum/blob/main/DOSBox/HBIOS.zip" ^
+                                     -OutFile %DosBoxSetPath%\HBIOS.zip
+    
+    tar -xzvf %DosBoxSetPath%\DOSBox-kor-lang.zip
+    del %DosBoxSetPath%\HBIOS.zip
 
     SET fileName=""
 
